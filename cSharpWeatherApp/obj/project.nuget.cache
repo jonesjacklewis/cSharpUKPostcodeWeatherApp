@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "7dhmI438Bk19k5OaYIe61Da+DV8VZOd5wMVXYUXzax0f5NUahxOxozVFKymaheh4NOiGup1Xgk2iL0zSLODshQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jones\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
+    "C:\\Users\\jones\\.nuget\\packages\\flurl.http\\3.2.4\\flurl.http.3.2.4.nupkg.sha512",
+    "C:\\Users\\jones\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\jones\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\jones\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\jones\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -35,14 +35,15 @@ namespace cSharpWeatherApp
             this.postcode = postCode;
             try
             {
-                string url = $"https://api.promaptools.com/service/uk/postcode-lat-lng/get/?postcode={this.postcode.Replace(" ", "%20")}&key=17o8dysaCDrgv1c";
+                string url = $"http://api.getthedata.com/postcode/{this.postcode.Replace(" ", "%20")}";
 
 
                 string content = http.GetString(url);
                 JObject latLongJson = JObject.Parse(content);
+                JToken data = latLongJson.GetValue("data");
 
-                double latitude = double.Parse(latLongJson.SelectToken("output[0].latitude").ToString());
-                double longitude = double.Parse(latLongJson.SelectToken("output[0].longitude").ToString());
+                double latitude = double.Parse(data["latitude"].ToString());
+                double longitude = double.Parse(data["longitude"].ToString());
 
                 this.latLong[0] = latitude;
                 this.latLong[1] = longitude;
@@ -65,8 +66,6 @@ namespace cSharpWeatherApp
            
 
         }
-
-     
 
         private void formDetails_Load(object sender, EventArgs e)
         {

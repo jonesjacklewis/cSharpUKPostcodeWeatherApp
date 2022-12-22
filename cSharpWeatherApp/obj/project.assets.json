@@ -5,10 +5,14 @@
       "Flurl/3.0.6": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Flurl.dll": {}
+          "lib/netstandard2.0/Flurl.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {}
+          "lib/netstandard2.0/Flurl.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Flurl.Http/3.2.4": {
@@ -19,10 +23,14 @@
           "System.Text.Encoding.CodePages": "4.5.1"
         },
         "compile": {
-          "lib/netstandard2.0/Flurl.Http.dll": {}
+          "lib/netstandard2.0/Flurl.Http.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Flurl.Http.dll": {}
+          "lib/netstandard2.0/Flurl.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/2.1.2": {
@@ -37,19 +45,27 @@
       "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Encoding.CodePages/4.5.1": {
@@ -231,11 +247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
+      "projectUniqueName": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpUKPostcodeWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
       "projectName": "cSharpWeatherApp",
-      "projectPath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
+      "projectPath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpUKPostcodeWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
       "packagesPath": "C:\\Users\\jones\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpWeatherApp\\cSharpWeatherApp\\obj\\",
+      "outputPath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpUKPostcodeWeatherApp\\cSharpWeatherApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -248,10 +264,11 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -281,7 +298,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -293,7 +311,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

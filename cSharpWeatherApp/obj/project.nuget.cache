@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7dhmI438Bk19k5OaYIe61Da+DV8VZOd5wMVXYUXzax0f5NUahxOxozVFKymaheh4NOiGup1Xgk2iL0zSLODshQ==",
+  "dgSpecHash": "9mfa1qoBTt4aS0AxJsS86rD0qghD0y9Jxj64+vl6IgfchlyeF4FbFYiHq/D2Es+/5DvjnVpMxA+dvMnPLMtNiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
+  "projectFilePath": "C:\\Users\\jones\\Documents\\Programming\\C#\\cSharpUKPostcodeWeatherApp\\cSharpWeatherApp\\cSharpWeatherApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jones\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
     "C:\\Users\\jones\\.nuget\\packages\\flurl.http\\3.2.4\\flurl.http.3.2.4.nupkg.sha512",

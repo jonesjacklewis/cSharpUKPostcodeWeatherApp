@@ -127,6 +127,7 @@
             this.btnCelsius.TabIndex = 10;
             this.btnCelsius.Text = "Celsius";
             this.btnCelsius.UseVisualStyleBackColor = true;
+            this.btnCelsius.Click += new System.EventHandler(this.btnCelsius_Click);
             // 
             // btnFahrenheit
             // 
@@ -136,6 +137,7 @@
             this.btnFahrenheit.TabIndex = 11;
             this.btnFahrenheit.Text = "Fahrenheit";
             this.btnFahrenheit.UseVisualStyleBackColor = true;
+            this.btnFahrenheit.Click += new System.EventHandler(this.btnFahrenheit_Click);
             // 
             // btnKelvin
             // 
@@ -145,6 +147,7 @@
             this.btnKelvin.TabIndex = 12;
             this.btnKelvin.Text = "Kelvin";
             this.btnKelvin.UseVisualStyleBackColor = true;
+            this.btnKelvin.Click += new System.EventHandler(this.btnKelvin_Click);
             // 
             // btnBack
             // 

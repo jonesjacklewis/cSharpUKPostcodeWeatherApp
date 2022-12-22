@@ -18,6 +18,10 @@ namespace cSharpWeatherApp
         private double[] latLong = {0,0};
         private HttpMethods http = new HttpMethods();
         private string tempFile = "";
+        private const string CELSIUS_SYMBOL = "°C";
+        private const string FAHRENHEIT_SYMBOL = "°F";
+        private const string KELVIN_SYMBOL = "K";
+
 
         public formDetails(String postCode)
         {
@@ -35,14 +39,15 @@ namespace cSharpWeatherApp
             this.postcode = postCode;
             try
             {
-                string url = $"https://api.promaptools.com/service/uk/postcode-lat-lng/get/?postcode={this.postcode.Replace(" ", "%20")}&key=17o8dysaCDrgv1c";
+                string url = $"http://api.getthedata.com/postcode/{this.postcode.Replace(" ", "%20")}";
 
 
                 string content = http.GetString(url);
                 JObject latLongJson = JObject.Parse(content);
+                JToken data = latLongJson.GetValue("data");
 
-                double latitude = double.Parse(latLongJson.SelectToken("output[0].latitude").ToString());
-                double longitude = double.Parse(latLongJson.SelectToken("output[0].longitude").ToString());
+                double latitude = double.Parse(data["latitude"].ToString());
+                double longitude = double.Parse(data["longitude"].ToString());
 
                 this.latLong[0] = latitude;
                 this.latLong[1] = longitude;
@@ -65,8 +70,6 @@ namespace cSharpWeatherApp
            
 
         }
-
-     
 
         private void formDetails_Load(object sender, EventArgs e)
         {
@@ -94,7 +97,7 @@ namespace cSharpWeatherApp
 
 
             lblTempValue.Text = $"{celsiusTemp}";
-            lblTempUnit.Text = "°C";
+            lblTempUnit.Text = CELSIUS_SYMBOL;
 
             lblWeatherDesc.Text = weatherDescription;
 
@@ -124,6 +127,76 @@ namespace cSharpWeatherApp
             formLocation.Closed += (s, args) => this.Close();
             formLocation.Show();
 
+        }
+
+        private void btnCelsius_Click(object sender, EventArgs e)
+        {
+            if(lblTempUnit.Text == CELSIUS_SYMBOL)
+            {
+                return;
+            }
+
+            double currentTemp = double.Parse(lblTempValue.Text);
+            double tempC;
+
+            if(lblTempUnit.Text == FAHRENHEIT_SYMBOL)
+            {
+                tempC = (currentTemp - 32) * (5.0 / 9.0);
+            }
+            else // kelvin
+            {
+                tempC = currentTemp - 273.15;
+            }
+
+            lblTempValue.Text = tempC.ToString();
+            lblTempUnit.Text = CELSIUS_SYMBOL;
+        }
+
+        private void btnFahrenheit_Click(object sender, EventArgs e)
+        {
+            if(lblTempUnit.Text == FAHRENHEIT_SYMBOL)
+            {
+                return;
+            }
+
+            double currentTemp = double.Parse(lblTempValue.Text);
+            double tempF;
+
+            if(lblTempUnit.Text == CELSIUS_SYMBOL)
+            {
+                tempF = (currentTemp * (9.0 / 5.0)) + 32;
+            }
+            else // kelvin
+            {
+                tempF = ((currentTemp - 273.15) * (9.0 / 5.0)) + 32;
+            }
+
+            lblTempValue.Text = tempF.ToString();
+            lblTempUnit.Text = FAHRENHEIT_SYMBOL;
+
+        }
+
+        private void btnKelvin_Click(object sender, EventArgs e)
+        {
+            if(lblTempUnit.Text == KELVIN_SYMBOL)
+            {
+                return;
+            }
+
+            double currentTemp = double.Parse(lblTempValue.Text);
+            double tempK;
+
+            if (lblTempUnit.Text == CELSIUS_SYMBOL)
+            {
+                tempK = currentTemp + 273.15;
+            }
+            else // fahrenheit
+            {
+                tempK = ((currentTemp - 32) * (5.0 / 9.0)) + 273.15;
+            }
+
+            lblTempValue.Text = tempK.ToString();
+            lblTempUnit.Text = KELVIN_SYMBOL;
         }
     }
 }
